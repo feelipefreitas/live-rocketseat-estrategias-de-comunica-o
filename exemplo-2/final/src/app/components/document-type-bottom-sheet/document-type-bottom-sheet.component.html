@@ -1,0 +1,23 @@
+<div
+  class="bottom-sheet-overlay"
+  [class.show]="isOpen"
+  (click)="closeSheet()"
+></div>
+
+<div class="bottom-sheet-container" [class.show]="isOpen">
+  <div class="bottom-sheet-header">
+    <h3 class="bottom-sheet-title">Selecione o tipo do documento</h3>
+    <button class="close-button" (click)="closeSheet()">&times;</button>
+  </div>
+  <div class="bottom-sheet-content">
+    <button class="bottom-sheet-option" (click)="selectOption('rg')">
+      <i class="far fa-id-card icon"></i> RG
+    </button>
+    <button class="bottom-sheet-option" (click)="selectOption('cnpj')">
+      <i class="far fa-building icon"></i> CNPJ
+    </button>
+    <button class="bottom-sheet-option" (click)="selectOption('habilitacao')">
+      <i class="far fa-address-card icon"></i> Habilitação
+    </button>
+  </div>
+</div>

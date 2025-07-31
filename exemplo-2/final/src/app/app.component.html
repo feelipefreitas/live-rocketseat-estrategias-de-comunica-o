@@ -1,0 +1,32 @@
+<!-- <button (click)="bottomSheet.openSheet()">Abrir Opções de Captura</button>
+
+<app-capture-bottom-sheet #bottomSheet (optionSelected)="handleOption($event)">
+  <app-document-type-bottom-sheet
+    #intermediateComp
+  ></app-document-type-bottom-sheet>
+</app-capture-bottom-sheet> -->
+
+<!-- 
+<button (click)="documentSheet.openSheet()">
+  Selecionar Tipo de Documento
+</button> -->
+
+<button (click)="multipleBottomSheet.openSheet()">
+  Abrir Opções de Captura Múltipla
+</button>
+
+<app-multiple-capture-bottom-sheet
+  #multipleBottomSheet
+  (optionSelected)="handleOption($event)"
+>
+  <app-document-type-bottom-sheet
+    #intermediateComp
+    documentosIntermediateComp
+  ></app-document-type-bottom-sheet>
+
+  <app-document-status-bottom-sheet #intermediateComp galeriaIntermediateComp>
+    <app-analysis-sector-bottom-sheet
+      #intermediateComp
+    ></app-analysis-sector-bottom-sheet>
+  </app-document-status-bottom-sheet>
+</app-multiple-capture-bottom-sheet>

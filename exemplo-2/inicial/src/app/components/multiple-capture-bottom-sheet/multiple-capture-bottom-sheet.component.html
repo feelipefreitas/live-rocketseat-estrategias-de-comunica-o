@@ -1,0 +1,23 @@
+<div
+  class="bottom-sheet-overlay"
+  [class.show]="isOpen"
+  (click)="closeSheet()"
+></div>
+
+<div class="bottom-sheet-container" [class.show]="isOpen">
+  <div class="bottom-sheet-header">
+    <h3 class="bottom-sheet-title">Opções de captura</h3>
+    <button class="close-button" (click)="closeSheet()">&times;</button>
+  </div>
+  <div class="bottom-sheet-content">
+    <button class="bottom-sheet-option" (click)="selectOption('camera')">
+      <i class="fas fa-camera icon"></i> Câmera
+    </button>
+    <button class="bottom-sheet-option" (click)="selectOption('documentos')">
+      <i class="far fa-file-alt icon"></i> Documentos
+    </button>
+    <button class="bottom-sheet-option" (click)="selectOption('galeria')">
+      <i class="far fa-images icon"></i> Galeria
+    </button>
+  </div>
+</div>
