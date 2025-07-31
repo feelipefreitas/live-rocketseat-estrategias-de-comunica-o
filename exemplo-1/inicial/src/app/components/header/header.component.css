@@ -1,0 +1,56 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #3f51b5; /* Azul índigo suave */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: "Roboto", sans-serif; /* Fonte mais moderna */
+}
+
+.app-title {
+  font-size: 2.2em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cart-button {
+  background-color: #ff4081; /* Rosa vibrante */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cart-button:hover {
+  background-color: #e03770;
+  transform: translateY(-2px);
+}
+
+.cart-button i {
+  margin-right: 10px;
+  font-size: 1.3em;
+}
+
+.cart-count {
+  font-weight: 700;
+  margin-left: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: 50%;
+  min-width: 25px;
+  text-align: center;
+}

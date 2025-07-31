@@ -1,0 +1,12 @@
+@let cartProductsLength = (_productsManagerService.cartProducts$ |
+async)?.length;
+
+<footer class="cart-summary-bar">
+  <button
+    class="buy-button"
+    (click)="onBuyProducts(cartProductsLength)"
+    [disabled]="!cartProductsLength"
+  >
+    Comprar {{ cartProductsLength }} itens
+  </button>
+</footer>

@@ -1,0 +1,17 @@
+@let cartProductsLength = (_productsManagerService.cartProducts$ |
+async)?.length;
+
+<header class="app-header">
+  <div class="app-title">FakeStoreApp</div>
+  <button class="cart-button" (click)="isSideBarOpen = true">
+    <i class="fas fa-shopping-cart"></i> Carrinho (<span class="cart-count">{{
+      cartProductsLength
+    }}</span
+    >)
+  </button>
+</header>
+
+<app-cart-sidebar
+  [isOpen]="isSideBarOpen"
+  (sideBarClosed)="isSideBarOpen = false"
+></app-cart-sidebar>

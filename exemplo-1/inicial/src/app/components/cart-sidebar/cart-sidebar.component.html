@@ -1,0 +1,52 @@
+<div
+  class="cart-sidebar-overlay"
+  [class.show]="isOpen"
+  (click)="onCloseClick()"
+></div>
+
+<div class="cart-sidebar-container" [class.show]="isOpen">
+  <div class="cart-sidebar-header">
+    <h3>Seu Carrinho</h3>
+    <button class="close-button" (click)="onCloseClick()">&times;</button>
+  </div>
+  <div class="cart-sidebar-content">
+    @if(false) {
+    <div class="empty-cart-message">Seu carrinho está vazio.</div>
+    }
+    <div>
+      <div class="cart-item">
+        <img
+          [src]="'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg'"
+          class="cart-item-image"
+        />
+        <div class="cart-item-details">
+          <div class="cart-item-title">
+            {{ "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops" }}
+          </div>
+          <div class="cart-item-price">R$ {{ 109.95 }} x {{ 10 }}</div>
+        </div>
+        <button class="remove-item-button">
+          <i class="fas fa-trash-alt"></i> Remover
+        </button>
+      </div>
+      <div class="cart-item">
+        <img
+          [src]="
+            'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg'
+          "
+          class="cart-item-image"
+        />
+        <div class="cart-item-details">
+          <div class="cart-item-title">
+            {{ "Mens Casual Premium Slim Fit T-Shirts" }}
+          </div>
+          <div class="cart-item-price">R$ {{ 109.95 }} x {{ 10 }}</div>
+        </div>
+        <button class="remove-item-button">
+          <i class="fas fa-trash-alt"></i> Remover
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="cart-sidebar-footer">Total: R$ {{ 999 }}</div>
+</div>
